@@ -1,5 +1,5 @@
 import React from 'react';
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './App.css';
 import { Image } from 'antd';
 import Project from './pages/Project';
@@ -18,9 +18,17 @@ function App() {
   const myRef = React.createRef();
   const onMainScroll = () => {
     const scrollTop = document.body?.scrollTop;
-    setTitleVisibility(scrollTop > 30 ? false : true);
+    const scrollTop_ = myRef.current?.scrollTop;
+    console.log({scrollTop, scrollTop_})
+    if(scrollTop_ === undefined || scrollTop === undefined) return;
+    setTitleVisibility( (scrollTop > 30 || scrollTop_ > 30) ? false : true);
   }
   document.body.addEventListener('scroll', onMainScroll);
+
+  useEffect(() => {
+    myRef.current.addEventListener('scroll', onMainScroll);
+  })
+
   return (
     <div ref={myRef}  className={`${prefix}main-container`}>
       <div style={{opacity: titleVisibility ? "0.5" : "0"}} className={`${prefix}main-title`}>
@@ -33,23 +41,25 @@ function App() {
       <Image
         preview={false}
         className={`${prefix}main-image`}
-        src="https://gw.alicdn.com/tfs/TB1AMlDTVT7gK0jSZFpXXaTkpXa-1920-1015.png"
+        src={require('./home.jpg')}
       >
       </Image>
       <div  className={`${prefix}main-description-container`}>
         <div  className={`${prefix}main-description`}>
-          <span> DISCOVER </span>
           <h1>
-            THE EXEMPLARY GRAND TOURER
+            DESIGNING FOR THE ULTIMATE
           </h1>
           <p>
-            Standard-bearer for an all-new generation of cars, DB11 is the most powerful and efficient ‘DB’ production model in Aston Martin’s history. Available as a Coupe with the 5.2-liter twin-turbocharged V12 or the 4.0-liter twin-turbocharged V8 engine, DB11 takes our grand touring heritage to unprecedented heights.
+            With the passion for sport cars since young, I always have the dream to design and build my own sport car. Everything starts at the age of 3, when my dad showed me the game Need for Speed, it was the ‘Hot Pursuit 2’, and my dad let me play the game before I go to kindergarten every day. After all these year growing up with car games, I become an engineer studying in University of Cambridge. This gets me closer to my dream. 
           </p>
           <p>
-            DB11 AMR is the new flagship of the DB11 range, boasting greater power, increased performance, enhanced driving dynamics and a more characterful exhaust note.          
+            In the 2020 summer, I very rarely went outside due to the covid-19 and I started to officially design a car. Although I am a huge fan of JDM, I still appreciate the design of European sport cars. Also, I am a stylist so I do want my car to be good looking instead of chasing pure aero performance. I have sketched portraits for many years as a hobby and this allows me to show my ideas on the paper clearly. I have also see CAD engineers at Lotus using CATIA and I realize this is a very widely used CAD software in automotive industry. Therefore, I brought video courses and started to learn it. After hundreds of hours of learning, I think I have the skills I need to make my 2D design into 3D in CATIA.          
           </p>
           <p>
-            The DB11 Volante completes the family; offering an equally stunning, open-topped GT experience.          
+            And I did it. The model seems a bit default, the curvatures are not smooth and windows are bumpy. The rendering in CATIA is not as good as SolidWorks, so I learnt to use Keyshot to render and produce simple demos of my car.          
+          </p>
+          <p>
+            The following are my designs and results of ANSYS CFX for rear wings design. Have a look!
           </p>
         </div>
       </div>
