@@ -1,0 +1,155 @@
+body {
+  overflow-x: hidden;
+}
+
+.dpw-main-connect-container {
+  height: fit-content;
+  width: 16vw;
+  display: flex;
+  margin: 0 auto 5px auto;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 1.6rem;
+  padding-bottom: 10px;
+}
+
+.dpw-main-connect-container *{
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0 0.15rem;
+}
+
+.dpw-main-connect-container a:hover *{
+  color: rgba(26, 98, 231, 0.651) !important;
+  transition: .3s;
+}
+
+.dpw-main-container {
+  overflow: hidden;
+  width: 100vw;
+  height: 200vh;
+  background-color: #000000;
+  overflow-y: scroll;
+}
+
+.dpw-main-title-image {
+  z-index: 2;
+  position: relative !important;
+  background-repeat: no-repeat;
+  opacity: 1;
+  left: 30px;
+  animation: dpw-show-title-animation 2s ease-in-out;
+  width: 30vw;
+}
+
+.dpw-main-title {
+  transition: opacity 0.5s;
+  z-index: 1;
+  position: absolute !important;
+  width: 100vw;
+  height: 120px;
+  opacity: 0.5;
+  background-color: #000000;
+  display: flex;
+  align-items: center;
+}
+
+
+.dpw-main-description {
+  height: 80%;
+  overflow-y: auto;
+  margin-bottom: 2%;
+  font-size: 1.5rem;
+  position: relative;
+  width: 85%;
+  text-align: center;
+  color: #ffffff;
+}
+
+.dpw-main-description h1 {
+  color: white;
+  margin: 0.5rem 0 1rem 0;
+  font-family: Optima,Times New Roman,Times,sans-serif;
+}
+
+.dpw-main-description span {
+  color: white;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.dpw-main-description p {
+  margin-bottom: 2.6rem;
+  font-family: Optima,Times New Roman,Times,sans-serif;
+}
+
+.dpw-main-description-container {
+  height: 38.2vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dpw-main-image {
+  position: relative;
+  width: 100vw;
+  height: 61.8vh;
+  background-color: #000000;
+  animation: dpw-show-main-image-animation 1s linear;
+}
+
+.dpw-main-image img {
+  height: 100%;
+  width: 100%;
+}
+
+@keyframes dpw-show-title-animation{
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes dpw-show-main-image-animation {
+  from {
+    filter: blur(50px);  
+  }
+
+  to {
+    filter: blur(0);
+  }
+}
+
+body {
+  overflow-y: scroll;
+}
+
+  @media screen and (max-width: 800px) {
+  .dpw-main-image {
+    height: 50vh;
+    min-width: 900px;
+    left: -100px;
+  }
+
+  .dpw-main-description-container {
+    height: 50vh;
+  }
+
+  .dpw-main-description {
+    font-size: 3vw !important;
+  }
+
+  .dpw-main-title-image {
+    width: 85vw;
+    left: 0;
+  }
+
+  .dpw-main-title {
+    height: 80px;
+    justify-content: center;
+  }
+
+}
