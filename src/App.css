@@ -141,6 +141,15 @@ body {
     font-size: 3vw !important;
   }
 
+  .dpw-main-description h1 {
+    font-size: 1.6rem !important;
+    margin: 0.2rem 0 1.2rem 0;
+  }
+
+  .dpw-main-description p {
+    font-size: 1rem !important;
+  }
+
   .dpw-main-title-image {
     width: 58vw;
     left: 0;
