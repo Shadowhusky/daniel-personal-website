@@ -81,24 +81,25 @@
   }
 
   .dpw-text-field span {
-    color: white;
-    font-size: 1.3rem;
+    font-size: 1rem;
+    opacity: 0.5;
   }
   
 
   .dpw-text-field h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0;
+  }
+
+  .dpw-text-field * {
     color: white;
-    margin-bottom: 3%;
   }
 
   .dpw-text-field p {
-    margin-bottom: 3rem;
+    margin: 1.2rem 0 3rem 0 ;
     font-size: 1.2rem;
   }
 
-  .dpw-text-field h1 {
-    font-size: 2.5rem;
-  }
 
   .dpw-slides-button {
     transition: opacity .2s linear;
@@ -158,11 +159,16 @@
       margin: 4.6vh auto 0 auto;
     }
 
+    .dpw-text-field span {
+      font-size: 0.8rem;
+    }
+
     .dpw-text-field h1 {
       font-size: 1.6rem;
     }
 
     .dpw-text-field p {
+      margin-top: 0.6rem;
       margin-bottom: 1.5rem;
       font-size: 1rem;
     }

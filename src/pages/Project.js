@@ -46,6 +46,9 @@ function Project(props) {
           <h1>
             {content.title}
           </h1>
+          <span>
+            click on picture to view full size
+          </span>
           {
             content.desc.map( item => {
               return <p>{item}</p>
