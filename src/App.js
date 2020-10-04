@@ -1,19 +1,41 @@
+// Frameworks
 import React from 'react';
+import firebase from 'firebase/app';
+import 'firebase/analytics';
+
+// Utils
 import { useState, useEffect } from 'react'
-import './App.css';
+
+// Configs
+import FIREBASE_CONFIG from "./firebaseConfig";
+
+// Styles
+import "./App.css";
+
+// Components 
+// import { message } from 'antd'
 import { Image } from 'antd';
-import Project from './pages/Project';
 import {
   LinkedinOutlined,
-  FacebookOutlined,
-  InstagramOutlined
+  InstagramOutlined,
+  HeartOutlined,
 } from '@ant-design/icons';
+
+// Pages 
+import Project from './pages/Project';
 
 const prefix = 'dpw-';
 
-// const { TabPane } = Tabs;
+var initialized;
 
 function App() {
+
+  if(!initialized) {
+    firebase.initializeApp(FIREBASE_CONFIG);
+    firebase.analytics();
+    initialized = true;
+}
+
   const [titleVisibility, setTitleVisibility] = useState(true);
   const myRef = React.createRef();
   const onMainScroll = () => {
@@ -67,13 +89,10 @@ function App() {
       <Project content={project_content_2}/> 
       <Project content={project_content_3}/>
       <section className={`${prefix}main-connect-container`}> 
-      <a href=".">
+      <a href="https://www.linkedin.com/in/daniel-qu">
         <LinkedinOutlined />
       </a>
-      <a href=".">
-        <FacebookOutlined />
-      </a>
-      <a href=".">
+      <a href="https://www.instagram.com/misaya_qu/">
         <InstagramOutlined />
       </a>
       </section>

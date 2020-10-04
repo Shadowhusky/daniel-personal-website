@@ -1,0 +1,11 @@
+{
+  "hosting": {
+    "site": "daniel-qu",
+    "public": "build",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
