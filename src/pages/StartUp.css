@@ -1,7 +1,10 @@
 .dpw-startup-container {
+  overflow: hidden;
   width: 100vw;
   height: 100vh;
   background-color: #000000;
+  position: absolute;
+  top: 0;
 }
 
 .dpw-startup-container :first-child{
@@ -22,7 +25,8 @@
 }
 
 .dpw-startup-start-button-border {
-  animation: dpw-startup-rotate-animation 1s ease-in-out;
+  opacity: 1;
+  animation: dpw-startup-rotate-animation 1s ease-in-out forwards;
   border-right: solid;
   border-left: solid;
   width: 200px;
@@ -31,6 +35,10 @@
   border-bottom-left-radius: 50%;
   border-color: rgb(135, 206, 235);
   transform: rotateZ(45deg);
+}
+
+.dpw-startup-loading-animated {
+  animation: dpw-startup-loading-animation 2s cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite;
 }
 
 .dpw-startup-start-button {
@@ -75,10 +83,10 @@
 }
 
 .dpw-startup-start-speed-meter {
-  margin: 66px;
+  margin: 0 5vw;
   width: 380px;
   height: 380px;
-  transform: rotateX(66deg);
+  transform: rotateX(67deg);
   border-top: solid rgba(135, 206, 235, 0.8) 3px;
   border-left: solid rgba(135, 206, 235, 0.8) 3px;
   border-right: solid rgba(255, 0, 0, 0.7) 5px;
@@ -140,6 +148,15 @@
 }
 
 
+@keyframes dpw-startup-loading-animation {
+  0% {
+    transform: rotateY(45deg) rotateZ(45deg);
+  }
+  90% {
+    transform: rotateY(360deg) rotateZ(45deg);
+  }
+}
+
 @keyframes dpw-startup-show-animation {
   from {
     opacity: 0;
@@ -151,11 +168,11 @@
 
 @keyframes dpw-startup-rotate-animation {
   from {
-    opacity: 0.1;
-    transform: rotateZ(-45deg);
+    opacity: 1;
+    transform: rotateZ(-135deg);
   }
   to {
-    opacity: 1;
+    opacity: 0.6;
     transform: rotateZ(45deg);
   }
 }
@@ -194,15 +211,26 @@
   
   .dpw-startup-start-button-container {
     top: 70%;
+    width: 20vh;
+    height: 20vh;
+  }
+  .dpw-startup-start-button-border {
+    width: 20vh;
+    height: 20vh;
+  }
+
+  .dpw-startup-start-button-text {
+    font-size: 1.75vh;
   }
 
   .dpw-startup-start-speed-meter-container {
-    top: 2%;
+    top: 5%;
   }
   
   .dpw-startup-start-speed-meter {
-    width: 390px;
-    height: 390px;
+    margin: 0;
+    width: 39vh;
+    height: 39vh;
   }
 
   .dpw-startup-start-speed-meter-pointer-container {
