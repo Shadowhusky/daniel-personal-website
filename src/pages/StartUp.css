@@ -1,58 +1,213 @@
 .dpw-startup-container {
-    width: 100vw;
-    height: 100vh;
-    background-color: #000000;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000000;
 }
 
-.dpw-startup-start-button-container { 
-    position: absolute;
-    margin: auto;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    width: 300px;
-    height: 300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.dpw-startup-container :first-child{
+  z-index: 1;
+}
+
+.dpw-startup-start-button-container {
+  transition: opacity .3s;
+  position: absolute;
+  left: 50%;
+  top: 70%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .dpw-startup-start-button-border {
-    animation: dpw-startup-rotate-animation 1s ease-in-out alternate;
-    width: 300px;
-    height: 300px;
-    border-right: solid;
-    border-left: solid;
-    border-top-right-radius: 50%;
-    border-bottom-left-radius: 50%;
-    border-color: skyblue;
-    transform: rotateZ(45deg);
+  animation: dpw-startup-rotate-animation 1s ease-in-out;
+  border-right: solid;
+  border-left: solid;
+  width: 200px;
+  height: 200px;
+  border-top-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+  border-color: rgb(135, 206, 235);
+  transform: rotateZ(45deg);
 }
 
 .dpw-startup-start-button {
-    border: solid 3px skyblue;
-    width: 80%;
-    height: 80%;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  transition: border-width 0.1s linear;
+  animation: dpw-startup-button-show-animation 0.2s
+    cubic-bezier(0.785, 0.135, 0.15, 0.86) forwards;
+  visibility: hidden;
+  animation-delay: 0.6s;
+  animation-iteration-count: 3;
+  border: solid 2px rgb(135, 206, 235);
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.dpw-startup-start-button:hover {
+  cursor: pointer;
+  border-width: 5px;
+}
+
+.dpw-startup-start-button-container:hover ~ .dpw-startup-start-button-border-container  {
+  opacity: 0;
 }
 
 .dpw-startup-start-button-text {
-    text-align: center;
-    color: white;
-    font-size: 30px;
+  text-align: center;
+  color: white;
+  font-size: 17px;
+}
+
+.dpw-startup-start-speed-meter-container {
+  animation: dpw-startup-show-animation 2s;
+  position: absolute;
+  left: 50%;
+  top: 10%;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+.dpw-startup-start-speed-meter {
+  margin: 66px;
+  width: 380px;
+  height: 380px;
+  transform: rotateX(66deg);
+  border-top: solid rgba(135, 206, 235, 0.8) 3px;
+  border-left: solid rgba(135, 206, 235, 0.8) 3px;
+  border-right: solid rgba(255, 0, 0, 0.7) 5px;
+  border-radius: 50%;
+}
+
+.dpw-startup-start-speed-meter > span[type~=P] {
+  color: rgba(0, 255, 0, 0.8);
+  font-size: 30px;
+  left: 50%;
+  position: absolute;
+  top: 75%;
+  transform: translateX(-50%);
+}
+
+.dpw-startup-start-speed-meter > span[type~=R] {
+  color: rgba(255, 255, 255, 0.1);
+  font-size: 30px;
+  left: 58%;
+  position: absolute;
+  top: 75%;
+  transform: translateX(-50%);
+}
+
+.dpw-startup-start-speed-meter-pointer-animated {
+  animation: dpw-startup-speed-meter-show-animation 2s ease-out forwards;
+  animation-delay: 1s;
+}
+
+.dpw-startup-start-speed-meter-pointer-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(-60deg);
+}
+
+.dpw-startup-start-speed-meter-pointer {
+  width: 32.5%;
+  background-color: #ffffff;
+  border-top: solid rgba(255, 0, 0, 0.8) 3.5px;
+  border-left: solid rgba(255, 0, 0, 0.8) 3.5px;
+  margin-right: 38%;
+  height: 7px;
+}
+
+.dpw-startup-start-speed-meter-pointer::after {
+  content: " ";
+  position: absolute;
+  left: 50%;
+  width: 18px;
+  border: solid 1px;
+  border-radius: 50%;
+  border-bottom-color: rgba(255, 255, 255, 0.9);
+  transform: translateX(-50%) translateY(-50%);
+  height: 18px;
+  background-color: rgba(255, 0, 0, 0.5);
+}
+
+
+@keyframes dpw-startup-show-animation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes dpw-startup-rotate-animation {
-    from {
-        opacity: 0.2;
-        transform: rotateZ(-45deg);
-    }
-    to {
-        opacity: 1;
-        transform: rotateZ(45deg);
-    }
+  from {
+    opacity: 0.1;
+    transform: rotateZ(-45deg);
+  }
+  to {
+    opacity: 1;
+    transform: rotateZ(45deg);
+  }
+}
+
+@keyframes dpw-startup-button-show-animation {
+  from {
+    border-color: rgba(135, 206, 235, 0);
+  }
+  to {
+    border-color: rgba(135, 206, 235, 1);
+    visibility: visible;
+  }
+}
+
+@keyframes dpw-startup-speed-meter-show-animation {
+  0% {
+    transform: rotate(-60deg);
+  }
+  20% {
+    transform: rotate(50deg);
+  }
+  50% {
+  }
+  75% {
+    transform: rotate(-30deg);
+  }
+  100% {
+    transform: rotate(-30deg);
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .dpw-startup-start-speed-meter-container > :nth-child(2){
+    display: none;
+  }
+  
+  .dpw-startup-start-button-container {
+    top: 70%;
+  }
+
+  .dpw-startup-start-speed-meter-container {
+    top: 2%;
+  }
+  
+  .dpw-startup-start-speed-meter {
+    width: 390px;
+    height: 390px;
+  }
+
+  .dpw-startup-start-speed-meter-pointer-container {
+    animation: dpw-startup-speed-meter-show-animation 2s ease-out forwards;
+    animation-delay: 1s;
+  }
+
 }

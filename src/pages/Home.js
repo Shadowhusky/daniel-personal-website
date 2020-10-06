@@ -32,7 +32,8 @@ var initialized;
 
 var database;
 
-function Home() {
+function Home(props) {
+  const { visible } = props;
   const [titleVisibility, setTitleVisibility] = useState(true);
   const [count, setCount] = useState(0);
   const mainRef = useRef(null);
@@ -81,9 +82,9 @@ function Home() {
 
   document.oncontextmenu = function() {return false;};
   return (
-    <div ref={mainRef}  className={`${prefix}container`}>
+    <div ref={mainRef} className={`${prefix}container`} style={{visibility: visible ? 'visible' : 'hidden'}}>
       {/* <ModelPage/> */}
-      <div style={{opacity: titleVisibility ? "0.5" : "0"}} className={`${prefix}title`}>
+      <div style={{opacity: (titleVisibility && visible) ? "0.5" : "0"}} className={`${prefix}title`}>
         <Image 
           src="https://gw.alicdn.com/tfs/TB13JZrgiDsXe8jSZR0XXXK6FXa-750-73.png"
           alt="Daniel Qu's Car Shop"
@@ -92,7 +93,7 @@ function Home() {
       </div>
       <Image
         preview={false}
-        className={`${prefix}image`}
+        className={ `${prefix}image ` + (visible && `${prefix}image-animated`)}
         src={require('./home.jpg')}
       >
       </Image>

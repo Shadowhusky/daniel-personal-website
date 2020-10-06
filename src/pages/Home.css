@@ -94,6 +94,9 @@ body {
     width: 100vw;
     height: 40vh;
     background-color: #000000;
+  }
+
+  .dpw-home-image-animated {
     animation: dpw-show-home-image-animation 1s linear;
   }
   
@@ -126,7 +129,7 @@ body {
     overflow-y: scroll;
   }
   
-    @media screen and (max-width: 900px) {
+  @media screen and (max-width: 900px) {
     .dpw-home-image {
       height: 50vh;
       min-width: 1000px;
