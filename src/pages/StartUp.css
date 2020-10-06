@@ -1,0 +1,58 @@
+.dpw-startup-container {
+    width: 100vw;
+    height: 100vh;
+    background-color: #000000;
+}
+
+.dpw-startup-start-button-container { 
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dpw-startup-start-button-border {
+    animation: dpw-startup-rotate-animation 1s ease-in-out alternate;
+    width: 300px;
+    height: 300px;
+    border-right: solid;
+    border-left: solid;
+    border-top-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    border-color: skyblue;
+    transform: rotateZ(45deg);
+}
+
+.dpw-startup-start-button {
+    border: solid 3px skyblue;
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dpw-startup-start-button-text {
+    text-align: center;
+    color: white;
+    font-size: 30px;
+}
+
+@keyframes dpw-startup-rotate-animation {
+    from {
+        opacity: 0.2;
+        transform: rotateZ(-45deg);
+    }
+    to {
+        opacity: 1;
+        transform: rotateZ(45deg);
+    }
+}

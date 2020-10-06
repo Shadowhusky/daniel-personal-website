@@ -3,7 +3,7 @@ import 'antd/dist/antd.css';
 import { Carousel, Image } from 'antd';
 import './Project.css';
 import { LeftOutlined, RightOutlined } from '@ant-design/icons';
-const prefix = 'dpw-'; //Daniel personal website
+const prefix = 'dpw-project-';
 
 function Project(props) {
   const { content } = props;
@@ -21,8 +21,8 @@ function Project(props) {
     }
   }
   return (
-    <div className={`${prefix}project-container`}>
-      <h2 className={`${prefix}project-title`}>
+    <div className={`${prefix}container`}>
+      <h2 className={`${prefix}title`}>
         {content.head}
       </h2>
       <section className={`${prefix}carousel-container`}>
