@@ -41,14 +41,10 @@ function Project(props) {
             return (
               <div
                 className={`${prefix}images-container`}
-                key={`${prefix}images-container-${index}-${parseInt(
-                  Math.random(10000)
-                )}`}
+                key={`${prefix}images-container-${content.key}-${index}`}
               >
                 <Image
-                  key={`${prefix}images-${index}-${parseInt(
-                    Math.random(10000)
-                  )}`}
+                  key={`${prefix}images-${content.key}-${index}`}
                   className={`${prefix}images`}
                   src={require(`../Projects/${content.key}/${item}`)}
                 />
@@ -67,7 +63,7 @@ function Project(props) {
         <h1>{content.title}</h1>
         <span>click on picture to view full size</span>
         {content.desc.map((item) => {
-          return <p>{item}</p>;
+          return <p key={`desc-${content.key}`}>{item}</p>;
         })}
       </div>
     </div>
