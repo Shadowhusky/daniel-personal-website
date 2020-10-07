@@ -23,7 +23,6 @@ import {
 
 // Pages 
 import Project from './Project';
-import StartUp from './StartUp';
 // import ModelPage  from './pages/Model';
 
 const prefix = 'dpw-home-';

@@ -41,7 +41,7 @@ function Project(props) {
             return (
               <div
                 className={`${prefix}images-container`}
-                key={`${prefix}images--container-${index}-${parseInt(
+                key={`${prefix}images-container-${index}-${parseInt(
                   Math.random(10000)
                 )}`}
               >

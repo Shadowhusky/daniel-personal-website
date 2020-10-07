@@ -25,7 +25,7 @@
 }
 
 .dpw-startup-start-button-border {
-  opacity: 1;
+  transition: border-color 1s;
   animation: dpw-startup-rotate-animation 1s ease-in-out forwards;
   border-right: solid;
   border-left: solid;
@@ -33,7 +33,7 @@
   height: 200px;
   border-top-right-radius: 50%;
   border-bottom-left-radius: 50%;
-  border-color: rgb(135, 206, 235);
+  border-color: rgba(135, 206, 235, 1);
   transform: rotateZ(45deg);
 }
 
@@ -168,11 +168,9 @@
 
 @keyframes dpw-startup-rotate-animation {
   from {
-    opacity: 1;
     transform: rotateZ(-135deg);
   }
   to {
-    opacity: 0.6;
     transform: rotateZ(45deg);
   }
 }

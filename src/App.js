@@ -5,10 +5,13 @@ import React from 'react';
 import { useState, useEffect } from "react";
 
 // Pages
-import Home from './pages/Home';
 import StartUp from './pages/StartUp';
+import Home from './pages/Home';
 
-const prefix = 'dpw-'; //Daniel personal website
+// Styles
+import "./App.css";
+
+const prefix = 'dpw-app-'; //Daniel personal website
 
 function App() {
   const [engineState, setEngineState] = useState(false);
@@ -16,17 +19,14 @@ function App() {
 
   useEffect(() => {
     // Cancel loading state after loaded
-    setTimeout(() => {
       setLoadingState(false);
-    }, 1000);
-
   }, []);
 
   const onStartedEngine = () => {
     setEngineState(true);
   }
   return (
-    <div className={`${prefix}home-container`}>
+    <div className={`${prefix}container`}>
       { !engineState && <StartUp loading={loadingState} onStartedEngine={onStartedEngine}/> }
       <Home visible={engineState}/>
     </div> 

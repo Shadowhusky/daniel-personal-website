@@ -1,9 +1,9 @@
 // Frameworks
-import React from "react";
+import React, { useEffect } from "react";
 
 // Utils
 import { useState } from "react";
-import * as classNames from 'classnames';
+import * as classNames from "classnames";
 
 // Styles
 import "./StartUp.css";
@@ -15,12 +15,16 @@ const prefix = "dpw-startup-";
 function StartUp(props) {
   const { onStartedEngine, loading } = props;
   const [meterVisibility, setMeterVisibility] = useState(false);
+  const [mountState, setMountState] = useState(false);
   const onStartButtonClick = () => {
     setMeterVisibility(true);
     setTimeout(() => {
       onStartedEngine();
     }, 2500);
   };
+  useEffect(() => {
+    setMountState(true);
+  }, []);
   return (
     <div className={`${prefix}container`}>
       <div
@@ -33,9 +37,18 @@ function StartUp(props) {
         </div>
       </div>
       <div
-        className={classNames(`${prefix}start-button-container`, `${prefix}start-button-border-container`)}
+        className={classNames(
+          `${prefix}start-button-container`,
+          `${prefix}start-button-border-container`
+        )}
       >
-        <div className={classNames(`${prefix}start-button-border`, (loading && `${prefix}loading-animated`))}></div>
+        <div
+          className={classNames(
+            `${prefix}start-button-border`,
+            loading && `${prefix}loading-animated`
+          )}
+          style={{ borderColor: `rgba(135, 206, 235, ${mountState ? 1 : 0})`}}
+        ></div>
       </div>
       {meterVisibility && <Meters />}
     </div>
@@ -54,7 +67,10 @@ const Meters = () => {
       </div>
       <div className={`${prefix}start-speed-meter`}>
         <div
-          className={classNames(`${prefix}start-speed-meter-pointer-container`, `dpw-startup-start-speed-meter-pointer-animated`)}
+          className={classNames(
+            `${prefix}start-speed-meter-pointer-container`,
+            `dpw-startup-start-speed-meter-pointer-animated`
+          )}
         >
           <div className={`${prefix}start-speed-meter-pointer`}></div>
         </div>
