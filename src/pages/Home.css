@@ -25,7 +25,7 @@ body {
   }
   
   .dpw-home-container {
-    overflow: hidden;
+    overflow-x: hidden;
     width: 100vw;
     height: 100vh;
     background-color: #000000;
@@ -103,6 +103,20 @@ body {
   .dpw-home-image img {
     height: 100%;
     width: 100%;
+  }
+
+  .dpw-home-developer-container {
+    display: flex;
+    font-size: 1.3em;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.25;
+    margin: 5px 0 15px 0;
+  }
+
+  .dpw-home-developer-container h6 {
+    color: #ffffff !important;
   }
   
   @keyframes dpw-show-title-animation{

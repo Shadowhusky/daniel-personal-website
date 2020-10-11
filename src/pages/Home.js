@@ -127,6 +127,10 @@ function Home(props) {
         <InstagramOutlined />
       </a>
       </footer>
+      <section className={`${prefix}developer-container`}>
+        <h6> Page Powered by Richard with love :D</h6>
+        <h6> Check source code to get my details </h6>
+      </section>
       {/* May use this format later
       <Tabs> 
         <TabPane tab="Project 1" key="project1">
