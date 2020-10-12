@@ -87,6 +87,7 @@ function Home(props) {
         <Image 
           src="https://gw.alicdn.com/tfs/TB13JZrgiDsXe8jSZR0XXXK6FXa-750-73.png"
           alt="Daniel Qu's Car Shop"
+          preview={false}
           className={`${prefix}title-image`}>
         </Image>
       </div>
@@ -129,7 +130,7 @@ function Home(props) {
       </footer>
       <section className={`${prefix}developer-container`}>
         <h6> Page Powered by Richard with love :D</h6>
-        <h6> Check source code to get my details </h6>
+        <h6> Check source code for my details </h6>
       </section>
       {/* May use this format later
       <Tabs> 

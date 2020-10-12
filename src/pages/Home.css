@@ -1,5 +1,5 @@
 body {
-    overflow-x: hidden;
+    overflow: hidden;
   }
   
   .dpw-home-connect-container {
@@ -138,11 +138,7 @@ body {
       filter: blur(0);
     }
   }
-  
-  body {
-    overflow-y: scroll;
-  }
-  
+
   @media screen and (max-width: 900px) {
     .dpw-home-image {
       height: 50vh;

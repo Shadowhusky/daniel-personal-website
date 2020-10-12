@@ -8,8 +8,9 @@ body {
   background-color: #000000;
 }
 
-body span {
+body span, body img {
   -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-drag: none;
     -webkit-user-select: none; /* Safari */
      -khtml-user-select: none; /* Konqueror HTML */
        -moz-user-select: none; /* Old versions of Firefox */
