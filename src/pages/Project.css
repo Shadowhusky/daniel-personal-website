@@ -20,6 +20,7 @@
   position: relative;
   margin: 0 4.5vw;
   width: 50%;
+  max-width: 850px;
   height: fit-content;
 }
 
@@ -58,7 +59,7 @@
 }
 
 .dpw-project-text-field {
-  width: 60%;
+  width: 55%;
   height: 30vh;
   color: white;
   position: relative;

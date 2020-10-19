@@ -57,12 +57,14 @@ body {
   .dpw-home-description {
     height: 80%;
     overflow-y: auto;
-    margin-bottom: 2%;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     position: relative;
-    width: 85%;
+    width: 80%;
     text-align: center;
     color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
   
   .dpw-home-description h1 {
