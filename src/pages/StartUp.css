@@ -113,7 +113,7 @@
 
 .dpw-startup-start-speed-meter-pointer-animated {
   animation: dpw-startup-speed-meter-show-animation 2s ease-out forwards;
-  animation-delay: 1s;
+  animation-delay: 1.3s;
 }
 
 .dpw-startup-start-speed-meter-pointer-container {

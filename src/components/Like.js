@@ -33,10 +33,16 @@ function Like(props) {
     }
     likeRef.current.addEventListener('mousedown', pressStart);
     likeRef.current.addEventListener('touchstart', pressStart);
-    likeRef.current.addEventListener('mouseup', () => clearTimeout(timer));
-    likeRef.current.addEventListener('touchend', () => clearTimeout(timer));
+    likeRef.current.addEventListener('mouseup', () => {
+      if(!likeRef.current.liked) likeRef.current.nextElementSibling.nextElementSibling.innerText = 'Hold longer';
+      clearTimeout(timer)
+    });
+    likeRef.current.addEventListener('touchend', () => {
+      if(!likeRef.current.liked) likeRef.current.nextElementSibling.nextElementSibling.innerText = 'Hold longer';
+      clearTimeout(timer)
+    });
     initialized = true;
-  })
+  }, [])
   return (
     <div className={`${prefix}main-like-container`}>
       <FireFilled ref={likeRef} className={`${prefix}main-like`}/>

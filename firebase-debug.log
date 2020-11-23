@@ -1,37 +1,30 @@
-[debug] [2020-10-11T06:35:35.817Z] ----------------------------------------------------------------------
-[debug] [2020-10-11T06:35:35.820Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy
-[debug] [2020-10-11T06:35:35.820Z] CLI Version:   8.11.2
-[debug] [2020-10-11T06:35:35.821Z] Platform:      darwin
-[debug] [2020-10-11T06:35:35.821Z] Node Version:  v12.18.4
-[debug] [2020-10-11T06:35:35.829Z] Time:          Sun Oct 11 2020 14:35:35 GMT+0800 (China Standard Time)
-[debug] [2020-10-11T06:35:35.830Z] ----------------------------------------------------------------------
-[debug] [2020-10-11T06:35:35.830Z] 
-[debug] [2020-10-11T06:35:35.843Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2020-10-11T06:35:35.843Z] > authorizing via signed-in user
-[debug] [2020-10-11T06:35:35.844Z] [iam] checking project daniel-qu for permissions ["firebase.projects.get","firebasehosting.sites.update"]
-[debug] [2020-10-11T06:35:35.845Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
-[debug] [2020-10-11T06:35:35.845Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+[debug] [2020-11-23T14:04:06.845Z] ----------------------------------------------------------------------
+[debug] [2020-11-23T14:04:06.846Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy
+[debug] [2020-11-23T14:04:06.846Z] CLI Version:   8.12.1
+[debug] [2020-11-23T14:04:06.847Z] Platform:      darwin
+[debug] [2020-11-23T14:04:06.847Z] Node Version:  v12.18.4
+[debug] [2020-11-23T14:04:06.847Z] Time:          Mon Nov 23 2020 22:04:06 GMT+0800 (China Standard Time)
+[debug] [2020-11-23T14:04:06.848Z] ----------------------------------------------------------------------
+[debug] [2020-11-23T14:04:06.848Z] 
+[debug] [2020-11-23T14:04:06.859Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-11-23T14:04:06.859Z] > authorizing via signed-in user
+[debug] [2020-11-23T14:04:06.859Z] [iam] checking project daniel-qu for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2020-11-23T14:04:06.861Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2020-11-23T14:04:06.862Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
  <request body omitted>
-[debug] [2020-10-11T06:35:36.379Z] <<< HTTP RESPONSE 200 {"date":"Sun, 11 Oct 2020 06:35:36 GMT","pragma":"no-cache","expires":"Mon, 01 Jan 1990 00:00:00 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-Q050=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
-[debug] [2020-10-11T06:35:36.399Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/daniel-qu:testIamPermissions  
+[debug] [2020-11-23T14:04:07.516Z] <<< HTTP RESPONSE 200 {"cache-control":"no-cache, no-store, max-age=0, must-revalidate","pragma":"no-cache","date":"Mon, 23 Nov 2020 14:04:07 GMT","expires":"Mon, 01 Jan 1990 00:00:00 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-11-23T14:04:07.545Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/daniel-qu:testIamPermissions  
  {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
-[debug] [2020-10-11T06:35:37.092Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 11 Oct 2020 06:35:36 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=184","alt-svc":"h3-Q050=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
-[debug] [2020-10-11T06:35:37.094Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/daniel-qu  
+[debug] [2020-11-23T14:04:08.123Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Mon, 23 Nov 2020 14:04:08 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=54","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-11-23T14:04:08.124Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/daniel-qu  
  
-[debug] [2020-10-11T06:35:37.679Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 11 Oct 2020 06:35:37 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-Q050=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-11-23T14:04:08.983Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Mon, 23 Nov 2020 14:04:08 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
 [info] 
 [info] === Deploying to 'daniel-qu'...
 [info] 
 [info] i  deploying hosting 
-[debug] [2020-10-11T06:35:37.681Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/daniel-qu/versions  
+[debug] [2020-11-23T14:04:08.986Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/daniel-qu/versions  
  {"config":{},"labels":{"deployment-tool":"cli-firebase"}}
-[debug] [2020-10-11T06:35:38.842Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 11 Oct 2020 06:35:38 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-Q050=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-11-23T14:04:10.275Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Mon, 23 Nov 2020 14:04:10 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
 [info] i  hosting[daniel-qu]: beginning deploy... 
-[info] i  hosting[daniel-qu]: found 60 files in build 
-[debug] [2020-10-11T06:35:39.407Z] [hosting] hash cache [YnVpbGQ] stored for 60 files
-[debug] [2020-10-11T06:35:39.407Z] [hosting][hash queue][FINAL] {"max":530,"min":24,"avg":266.50000000000006,"active":0,"complete":60,"success":60,"errored":0,"retried":0,"total":60,"elapsed":547}
-[debug] [2020-10-11T06:35:39.407Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/daniel-qu/versions/5fda8fc6f07e621e:populateFiles  
- <request body omitted>
-[debug] [2020-10-11T06:35:40.429Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 11 Oct 2020 06:35:40 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-Q050=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
-[debug] [2020-10-11T06:35:40.437Z] [hosting][populate queue][FINAL] {"max":1025,"min":1025,"avg":1025,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":1031}
-[debug] [2020-10-11T06:35:40.437Z] [hosting] uploads queued: 6
+[info] i  hosting[daniel-qu]: found 64 files in build 

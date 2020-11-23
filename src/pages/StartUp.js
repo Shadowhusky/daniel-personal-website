@@ -1,14 +1,16 @@
 // Frameworks
-import React, { useEffect } from "react";
+import React from "react";
 
 // Utils
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import * as classNames from "classnames";
+import useSound from 'use-sound';
 
 // Styles
 import "./StartUp.css";
 
-// Components
+// Resources
+import car_start from '../sounds/car_start.mp3';
 
 const prefix = "dpw-startup-";
 
@@ -16,7 +18,14 @@ function StartUp(props) {
   const { onStartedEngine, loading } = props;
   const [meterVisibility, setMeterVisibility] = useState(false);
   const [mountState, setMountState] = useState(false);
+  const [playsound_AppOpen] = useSound(car_start, {
+    volume:0.3,
+    interrupt: true
+  });
+
+
   const onStartButtonClick = () => {
+    if(!meterVisibility) playsound_AppOpen();
     setMeterVisibility(true);
     setTimeout(() => {
       onStartedEngine();
