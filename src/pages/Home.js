@@ -149,9 +149,9 @@ function Home(props) {
           </p>
         </div>
       </div>
-      <Project content={project_content_1} />
-      <Project content={project_content_2} />
-      <Project content={project_content_3} />
+      {visible && <Project content={project_content_1} />}
+      {visible && <Project content={project_content_2} />}
+      {visible && <Project content={project_content_3} />}
       <Like count={count} onConfirmLike={onConfirmLike} />
       <footer className={`${prefix}connect-container`}>
         <a target="_blank" href="https://www.linkedin.com/in/daniel-qu">
