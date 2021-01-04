@@ -19,7 +19,7 @@ function StartUp(props) {
   const [meterVisibility, setMeterVisibility] = useState(false);
   const [mountState, setMountState] = useState(false);
   const [playsound_AppOpen] = useSound(car_start, {
-    volume:0.3,
+    volume:0.1,
     interrupt: true
   });
 
