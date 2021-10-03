@@ -12,6 +12,8 @@
     "firebaseui": "^4.6.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-loading-skeleton": "^2.2.0",
+    "react-markdown": "^6.0.2",
     "react-scripts": "3.4.3",
     "three": "^0.121.1",
     "use-sound": "^2.0.0",
